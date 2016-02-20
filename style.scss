@@ -1,0 +1,252 @@
+
+
+
+
+
+body,html {
+  background-color: #1c2020;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  color:#efefef;
+  padding-left:60px;
+}
+
+.profile-link {
+    color:#efefef;
+    position: absolute;
+    left: 15px;
+
+    bottom: 14px;
+    height: 100px;
+    padding-left: 55px;
+    
+    background-size: 50px 50px;
+    z-index: 100;
+    img {
+      display:inline;
+
+    }
+    p{
+      display:inline;
+    }
+    a {
+      color:#efefef;
+      text-decoration: none;
+    }
+
+}
+
+
+#github {
+
+  position: absolute;
+    right: 15px;
+
+    bottom: 14px;
+    height: 45px;
+    padding-right: 55px;
+    
+    background-size: 50px 50px;
+    z-index: 100;
+
+}
+
+ a {
+      color:#efefef;
+      text-decoration: none;
+    }
+
+.navigation-arrow {
+    color:#efefef;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 70px;
+    width: 28px;
+    height: 42px;
+    margin: auto 0;
+    z-index: 1000;
+    cursor: pointer;
+    padding: 20px 10px;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    a {
+      color:#efefef;
+      text-decoration: none;
+    }
+}
+
+#prev {
+    left: 10px;
+    
+}
+
+#next {
+    right: 10px;
+    
+}
+
+
+
+/*music bar animation*/
+
+.loader {
+  margin: 0 auto;
+  width: 110px;
+  height: 70px;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+ 
+  
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  
+    div {
+    height: 100%;
+    width: 15px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+    -webkit-animation: delay 1.5s infinite ease-in-out;
+    animation: delay 1.5s infinite ease-in-out;
+   
+  }
+  
+  .bar1{
+    background-color: #EF597B ;
+    border-radius: 5px;
+  }
+  .bar2{
+    background-color: #FF6D31;
+    border-radius: 5px;
+    -webkit-animation-delay: -1.3s;
+    animation-delay: -1.3s;
+  }
+  .bar3{
+    background-color: #73B66B;
+    border-radius: 5px;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  .bar4{
+    background-color: #FFCB18;
+    border-radius: 5px;
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+  }
+  .bar5{
+    background-color: #93648D;
+    border-radius: 5px;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+  }
+  .bar6{
+    background-color:#29A2C6 ;
+    border-radius: 5px;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+  }
+}
+
+
+@-webkit-keyframes delay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.05) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes delay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.05);
+    -webkit-transform: scaleY(0.05);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+
+
+/*box spin animation*/
+
+
+$color-1: #754fa0;
+$color-2: #09b7bf;
+$color-3: #90d36b;
+$color-4: #f2d40d;
+
+
+.loader2 {
+  
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border-radius: 20%;
+    border-style: solid;
+    border-top-color: $color-1;
+    border-right-color: $color-2;
+    border-bottom-color: $color-3;
+    border-left-color: $color-4;
+    
+    content: '';
+
+    transform: translate(-50%, -50%);
+    animation: rotate 1.7s  infinite ease-in-out;
+  }
+  
+  &:before { border-width: 80px; }
+
+  &:after {
+    width: 100px;
+    height: 100px;
+    border-width: 10px;
+    animation-direction: reverse;
+  }
+}
+
+
+@keyframes rotate {
+   0% { transform: translate(-50%, -50%) rotate(0); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+
+/*simple animation*/
+
+
+
+
+.loader3{
+  width:160px;
+  height:160px;
+  border-radius:150px;
+  border:15px solid #fff;
+  border-top-color:rgba(0,0,0,0.1);
+  
+  box-sizing:border-box;
+  position:absolute;
+  top:50%;left:50%;
+  margin-top:-80px;
+  margin-left:-80px;
+  animation:loading 1.2s linear infinite;
+  -webkit-animation:loading 1.2s linear infinite;
+}
+@keyframes loading{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes loading{
+  0%{-webkit-transform:rotate(0deg)}
+  100%{-webkit-transform:rotate(360deg)}
+}
